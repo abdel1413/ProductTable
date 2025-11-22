@@ -3,8 +3,8 @@ export const ProductRows =({products})=>{
      ?products.name
      :<span style={{color:'red'}}>{products.name}</span> 
     return(<>
-           <tr>
-            <td>{name}</td>
+           <tr >
+            <td >{name}</td>
             <td>{products.price}</td>
            </tr>
     </>)
