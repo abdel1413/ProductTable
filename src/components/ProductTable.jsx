@@ -6,9 +6,10 @@ export const ProductTable = ({products})=>{
     const rows = [];
     let category = null 
     products.map(product =>{
+    
        if(product.category === category){
          rows.push(
-          <ProductCategories  categories={product.categories} key={product.categories}/>
+          <ProductCategories  categories={product.category} key={product.category}/>
     )}
 
      rows.push(
@@ -18,7 +19,7 @@ export const ProductTable = ({products})=>{
     })
 
 
-console.log('rows',rows)
+
 
 
          
@@ -30,10 +31,8 @@ console.log('rows',rows)
                     <th>Price</th>
                 </tr>
             </thead>
-            <tbody>
-                   
-             {rows}
-                 
+            <tbody>     
+             {rows} 
             </tbody>
         </table>
     </div>)
