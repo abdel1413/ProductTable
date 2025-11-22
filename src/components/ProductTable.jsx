@@ -32,7 +32,7 @@ console.log('rows',rows)
             </thead>
             <tbody>
                    
-          
+             {rows}
                  
             </tbody>
         </table>

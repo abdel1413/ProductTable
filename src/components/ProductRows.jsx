@@ -1,6 +1,11 @@
-export const ProductRows =()=>{
-     
+export const ProductRows =({products})=>{
+     const name = products.stocked
+     ?products.name
+     :<span style={{color:'red'}}>{products.name}</span> 
     return(<div>
-        products name and price
+           <tr>
+            <td>{name}</td>
+            <td>{products.price}</td>
+           </tr>
     </div>)
 }
