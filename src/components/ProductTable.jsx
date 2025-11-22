@@ -4,18 +4,18 @@ import { ProductRows } from "./ProductRows";
 export const ProductTable = ({products})=>{
     //pass the comp. category  and productRows here
     const rows = [];
-    let category = null 
+    let lastCategory = null 
     products.map(product =>{
     
-       if(product.category === category){
+       if(product.category === lastCategory){
          rows.push(
-          <ProductCategories  categories={product.category} key={product.category}/>
+          <ProductCategories  category={product.category} key={product.category}/>
     )}
 
      rows.push(
         <ProductRows products={product} key={product.name}/>
      )
-     category = product.category;
+     lastCategory = product.category;
     })
 
 

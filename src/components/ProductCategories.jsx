@@ -1,5 +1,6 @@
-export const ProductCategories =({categories})=>{
+export const ProductCategories =({category})=>{
+    console.log('cat',category)
     return (<tr>
-           <th>{categories}</th>
+           <th colSpan={2}>{category}</th>
     </tr>)
 }
