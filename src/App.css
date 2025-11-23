@@ -9,13 +9,12 @@
 
 
 .table-container{
-
   width: 500px;
   padding: 20px 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: #FFFFFF;
   box-shadow: 4px 3px 5px lightgray;
   border: 1px solid lightgray
 }

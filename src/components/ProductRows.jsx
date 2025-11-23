@@ -3,9 +3,9 @@ export const ProductRows =({products})=>{
      ?products.name
      :<span style={{color:'red'}}>{products.name}</span> 
     return(<>
-           <tr >
-            <td >{name}</td>
-            <td>{products.price}</td>
+           <tr  >
+            <td colSpan={2} >{name}</td>
+            <td colSpan={2}>{products.price}</td>
            </tr>
     </>)
 }

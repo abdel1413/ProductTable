@@ -28,9 +28,9 @@ export const ProductTable = ({products})=>{
     return (<div >
         <table>
             <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Price</th>
+                <tr  style={{ textDecoration: "underline"}} >
+                    <th colSpan={2}  >Name</th>
+                    <th colSpan={2}>Price</th>
                 </tr>
             </thead>
             <tbody>     
