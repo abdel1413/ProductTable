@@ -3,7 +3,6 @@ import { ProductRows } from "./ProductRows";
 
 export const ProductTable = ({products, filterText, inStockOnly})=>{
     //pass the comp. category  and productRows here
-console.log('filtw', filterText)
     const rows = [];
     let lastCategory = null 
    
