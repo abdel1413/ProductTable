@@ -6,24 +6,26 @@ export const ProductTable = ({products})=>{
 
     const rows = [];
     let lastCategory = null 
+   
     products.map(product =>{
+       
        if(product.category !== lastCategory){
          rows.push(
           <ProductCategories  category={product.category} key={product.category}/>
     )}
-     
+
      rows.push(
         <ProductRows products={product} key={product.name}/>
      )
      lastCategory = product.category;
     })
 
-rows.forEach(row => console.log(row.props))
+
 
 
 
          
-    return (<div>
+    return (<div >
         <table>
             <thead>
                 <tr>

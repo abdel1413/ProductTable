@@ -8,10 +8,10 @@ function App() {
  
 
   return (
-    <>
+    <div className='table-container'>
       
       <FilterProductTable  products ={Products}/>
-    </>
+    </div>
   )
 }
 
