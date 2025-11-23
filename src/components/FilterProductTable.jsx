@@ -5,13 +5,15 @@ import { SearchBar } from "./SearchBar"
 
 
 export const FilterProductTable =({products})=>{
-   const [textFilter, setTextFilter] = useState('fruits')
+   const [textFilter, setTextFilter] = useState('')
    const [inStockOnly,setInStockOnly]= useState(false)
   return(
      <div>
      <SearchBar 
       textFilter={textFilter}
       inStockOnly = {inStockOnly}
+      handleText = {setTextFilter}
+      handleInStockOnly = {setInStockOnly}
      />
      <ProductTable 
      products={products} 

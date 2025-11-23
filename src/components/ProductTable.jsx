@@ -1,13 +1,18 @@
 import { ProductCategories } from "./ProductCategories";
 import { ProductRows } from "./ProductRows";
 
-export const ProductTable = ({products})=>{
+export const ProductTable = ({products, filterText, inStockOnly})=>{
     //pass the comp. category  and productRows here
 
     const rows = [];
     let lastCategory = null 
    
     products.map(product =>{
+         //convert everything to lower then check if 
+         //entered text is in the product. if not don't do anything
+
+        if(product?.name?.toLowerCase().indexOf(filterText?.toLowerCase())===-1)return;
+        if(inStockOnly && !product.stocked) return;
        
        if(product.category !== lastCategory){
          rows.push(
