@@ -12,8 +12,8 @@ export const FilterProductTable =({products})=>{
      <SearchBar 
       textFilter={textFilter}
       inStockOnly = {inStockOnly}
-      handleText = {setTextFilter}
-      handleInStockOnly = {setInStockOnly}
+      onHandleText = {setTextFilter}
+      onHandleInStockOnly ={setInStockOnly}
      />
      <ProductTable 
      products={products} 
