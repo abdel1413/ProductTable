@@ -1,7 +1,7 @@
 import { ProductCategories } from "./ProductCategories";
 import { ProductRows } from "./ProductRows";
 
-export const ProductTable = ({products, filterText, inStockOnly})=>{
+export const ProductTable = ({products, textFilter, inStockOnly})=>{
     //pass the comp. category  and productRows here
     const rows = [];
     let lastCategory = null 
@@ -9,20 +9,28 @@ export const ProductTable = ({products, filterText, inStockOnly})=>{
     products.map(product =>{
          //convert everything to lower then check if 
          //entered text is in the product. if not don't do anything
-         console.log('fi',product.name,(filterText))
-         console.log('on', inStockOnly)
-         
-        // if(product.name.indexOf(filterText)===-1){return};
+          if(!product?.name?.toLowerCase().includes(textFilter.toLowerCase())){
+             return
+        };
+        console.log(product.name.indexOf(textFilter))
+     
+        
 
-        // if(inStockOnly && !product.stocked) {return};
+         if(inStockOnly && !product.stocked){
+            return
+        };
        
        if(product.category !== lastCategory){
          rows.push(
-          <ProductCategories  category={product.category} key={product.category}/>
+          <ProductCategories 
+           category={product.category}
+            key={product.category}/>
     )}
 
      rows.push(
-        <ProductRows products={product} key={product.name}/>
+        <ProductRows 
+        products={product}
+         key={product.name}/>
      )
      lastCategory = product.category;
     })
