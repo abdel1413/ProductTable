@@ -7,7 +7,12 @@ import { SearchBar } from "./SearchBar"
 export const FilterProductTable =({products})=>{
    const [textFilter, setTextFilter] = useState('')
    const [inStockOnly,setInStockOnly]= useState(false)
-   console.log(textFilter, inStockOnly)
+  
+   //we can update the state here
+   //or carry it down to child component from where
+   // the state update is initiated or triggered.
+   //in this case we have searchBar comp. which make parent comp.
+   //here filterProductTable to update. 
   const  handleText = (e)=>{
     console.log('e', e.target.value)
     setTextFilter(e.target.value)
@@ -19,6 +24,7 @@ export const FilterProductTable =({products})=>{
   }
   return(
      <div>
+      <h3>The Products menu</h3>
      <SearchBar 
       textFilter={textFilter}
       inStockOnly = {inStockOnly}

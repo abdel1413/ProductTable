@@ -12,10 +12,7 @@ export const ProductTable = ({products, textFilter, inStockOnly})=>{
           if(!product?.name?.toLowerCase().includes(textFilter.toLowerCase())){
              return
         };
-        console.log(product.name.indexOf(textFilter))
-     
         
-
          if(inStockOnly && !product.stocked){
             return
         };
